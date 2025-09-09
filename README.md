@@ -314,4 +314,4 @@ The **Scanner Cifrado S3** system has been **successfully implemented** with all
 ---
 
 *Developed by Delfos Labs using Spec-Driven Development methodology*  
-*Built with Python 3.11+, PyQt6, and industry-standard security practices*
+*Built with Python 3.11+, PyQt6, and industry-standard security practices* 
