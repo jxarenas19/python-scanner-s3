@@ -1,0 +1,85 @@
+## Pre-commit hooks configuration for Scanner → Cifrado local → S3 (MVP)
+## See https://pre-commit.com for more information
+#
+#repos:
+#  # Code formatting
+#  - repo: https://github.com/psf/black
+#    rev: 25.1.0
+#    hooks:
+#      - id: black
+#        language_version: python3.11
+#        args: [--line-length=88]
+#
+#  # Import sorting
+#  - repo: https://github.com/pycqa/isort
+#    rev: 5.13.2
+#    hooks:
+#      - id: isort
+#        args: [--profile=black, --line-length=88]
+#
+#  # Linting
+#  - repo: https://github.com/pycqa/flake8
+#    rev: 7.3.0
+#    hooks:
+#      - id: flake8
+#        additional_dependencies:
+#          - flake8-docstrings
+#          - flake8-cognitive-complexity
+#
+#  # Type checking
+#  - repo: https://github.com/pre-commit/mirrors-mypy
+#    rev: v1.17.1
+#    hooks:
+#      - id: mypy
+#        additional_dependencies:
+#          - types-python-dateutil
+#          - types-pytz
+#        args: [--strict, --ignore-missing-imports]
+#
+#  # General file checks
+#  - repo: https://github.com/pre-commit/pre-commit-hooks
+#    rev: v5.0.0
+#    hooks:
+#      # Remove trailing whitespace
+#      - id: trailing-whitespace
+#      # Ensure files end with newline
+#      - id: end-of-file-fixer
+#      # Check for merge conflict markers
+#      - id: check-merge-conflict
+#      # Check YAML syntax
+#      - id: check-yaml
+#      # Check JSON syntax
+#      - id: check-json
+#      # Check for large files
+#      - id: check-added-large-files
+#        args: [--maxkb=500]
+#      # Check Python AST
+#      - id: check-ast
+#      # Debug statements check
+#      - id: debug-statements
+#
+#  # Security checks
+#  - repo: https://github.com/pycqa/bandit
+#    rev: 1.7.10
+#    hooks:
+#      - id: bandit
+#        args: [-c, pyproject.toml]
+#        additional_dependencies: ["bandit[toml]"]
+#
+#  # Dependency checks
+#  - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+#    rev: v1.3.2
+#    hooks:
+#      - id: python-safety-dependencies-check
+#
+#ci:
+#  autofix_commit_msg: |
+#    [pre-commit.ci] auto fixes from pre-commit.com hooks
+#
+#    for more information, see https://pre-commit.ci
+#  autofix_prs: true
+#  autoupdate_branch: ''
+#  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+#  autoupdate_schedule: weekly
+#  skip: []
+#  submodules: false
