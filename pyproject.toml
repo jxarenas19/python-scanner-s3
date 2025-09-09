@@ -33,10 +33,6 @@ dev = [
 
 [project.scripts]
 scanner-app = "gui.main:main"
-scanner-cli = "cli.scanner_cli:main"
-crypto-cli = "cli.crypto_cli:main"
-upload-cli = "cli.upload_cli:main"
-auth-cli = "cli.auth_cli:main"
 
 [tool.black]
 line-length = 88
